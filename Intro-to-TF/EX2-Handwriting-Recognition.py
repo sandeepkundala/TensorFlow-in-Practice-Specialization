@@ -18,7 +18,7 @@ mnist = tf.keras.datasets.mnist
 class myCallback(tf.keras.callbacks.Callback):
   def on_epoch_end(self, epoch, logs={}):
     if(logs.get('acc')>0.99):
-      print("\nReached 60% accuracy so cancelling training!")
+      print("\nReached 99% accuracy so cancelling training!")
       self.model.stop_training = True
 
 callbacks = myCallback()
